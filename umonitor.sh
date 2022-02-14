@@ -39,7 +39,6 @@ while : ; do
 
   NOW=$(date +'%s')
   LEFT=$(echo "${POLLTIME}+${POLLINTERVAL}-${NOW}" | bc)
-  echo "Lst: ${POLLTIME}, Now: ${NOW}, Left: $LEFT"
 
   if [ "${LEFT}" -gt "0" ] ; then
     sleep $LEFT
